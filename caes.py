@@ -1,7 +1,7 @@
 import streamlit as st
 import psycopg2-binary
-import tkinter as tk
 
+wirte
 
 st.set_page_config(page_title="Caes abrigados")
 def apresenta():
