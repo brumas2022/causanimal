@@ -1,5 +1,6 @@
 import streamlit as st
-import psycopg2
+import psycopg2-binary
+import tkinter as tk
 
 
 st.set_page_config(page_title="Caes abrigados")
