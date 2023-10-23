@@ -1,6 +1,6 @@
 import streamlit as st
 ##import psycopg2
-from st_supabase_connection import SupabaseConnection
+from st-supabase-connection import SupabaseConnection
 
 st.set_page_config(page_title="Caes abrigados")
 def apresenta():
