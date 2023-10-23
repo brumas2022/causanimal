@@ -1,9 +1,11 @@
 import streamlit as st
-import psycopg2
+##import psycopg2
+from st_supabase_connection import SupabaseConnection
 
 st.set_page_config(page_title="Caes abrigados")
 def apresenta():
     try:
+        conn = st.experimental_connection("supabase",type=SupabaseConnection)
         connection = psycopg2.connect(
                    host='db.ibhcxtnwnonsnycfgjay.supabase.co',
                    user='postgres',
