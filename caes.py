@@ -5,21 +5,21 @@ from st_supabase_connection import SupabaseConnection
 st.set_page_config(page_title="Caes abrigados")
 def apresenta():
     try:
-        ##conn = st.experimental_connection("supabase",type=SupabaseConnection)
-        connection = psycopg2.connect(
-                   host='db.ibhcxtnwnonsnycfgjay.supabase.co',
-                   user='postgres',
-                   password='Hoje#estamos#fortes#como#geleia',
-                   database='postgres',
-                   port= '5432'
-        )
+        conn = st.experimental_connection("supabase",type=SupabaseConnection)
+        ##connection = psycopg2.connect(
+        ##           host='db.ibhcxtnwnonsnycfgjay.supabase.co',
+        ##           user='postgres',
+        ##           password='Hoje#estamos#fortes#como#geleia',
+        ##           database='postgres',
+        ##           port= '5432'
+        ##)
         st.write("conexao exitosa")
-        cursor = connection.cursor()
-        ##rows = conn.query("*", table="mytable", ttl="10m").execute()
-        ##st.write(rows)
-        comando = f"""SELECT * FROM caninos"""
-        cursor.execute(comando)
-        resultado = cursor.fetchall()
+        ##cursor = connection.cursor()
+        rows = conn.query("*", table="mytable", ttl="10m").execute()
+        st.write(rows)
+        ##comando = f"""SELECT * FROM caninos"""
+        ##cursor.execute(comando)
+        ##resultado = cursor.fetchall()
     except Exception as ex:
             st.write(ex)
 
