@@ -1,5 +1,6 @@
 import streamlit as st
 ##import psycopg2
+from supabase import create_client, Client
 from st-supabase-connection import SupabaseConnection
 
 st.set_page_config(page_title="Caes abrigados")
@@ -86,6 +87,25 @@ elif selecao == "ATUALIZAR":
     st.image("https://ibhcxtnwnonsnycfgjay.supabase.co/storage/v1/object/sign/Meninos/Bebezao.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZW5pbm9zL0JlYmV6YW8uanBnIiwiaWF0IjoxNjk1MzA0MDk3LCJleHAiOjE2OTU5MDg4OTd9.K0grSxa96hMoWxuzdr53pMNRtNxIiOUiDhI4V1IdXjE&t=2023-09-21T13%3A48%3A18.337Z")
     
 elif selecao == "REMOVER":
+    @st.cache_resource
+def init_connection():
+    url = st.secrets["SUPABASE_URL"]
+    key = st.secrets["SUPABASE_KEY"]
+    return create_client(url, key)
+
+supabase = init_connection()
+
+# Perform query.
+# Uses st.cache_data to only rerun when the query changes or after 10 min.
+@st.cache_data(ttl=600)
+def run_query():
+    return supabase.table("mytable").select("*").execute()
+
+rows = run_query()
+
+# Print results.
+for row in rows.data:
+    st.write(f"{row['name']} has a :{row['pet']}:")
     
     st.text("Este modulo ainda está em construção")
     
