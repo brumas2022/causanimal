@@ -86,7 +86,7 @@ def consulta():
         cursor = connection.cursor()
         
         
-        comando = f"""SELECT nome FROM caninos"""
+        comando = f"""SELECT nome FROM caninos WHERE genero='macho'"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
     except Exception as ex:
