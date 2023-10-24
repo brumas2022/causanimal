@@ -90,7 +90,7 @@ def consulta():
         cursor = connection.cursor()
         
         
-        comando = f"""SELECT * FROM caninos WHERE nome='Bob'"""
+        comando = f"""SELECT * FROM caninos WHERE nome='Mosquito'"""
         cursor.execute(comando)
         resultado = cursor.fetchone()
     except Exception as ex:
@@ -99,6 +99,9 @@ def consulta():
     st.write(resultado[1])
     st.write(resultado[2])
     st.write(resultado[3])
+    st.write(resultado[4])
+    st.write(resultado[5])
+    
 
 
 st.title("Cadastro dos caes")
