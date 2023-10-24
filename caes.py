@@ -105,7 +105,7 @@ elif selecao == "ATUALIZAR":
     st.text("Este modulo ainda está em construção")
     st.text("Mas esta foto é do Bebezao")
     st.image("https://ibhcxtnwnonsnycfgjay.supabase.co/storage/v1/object/sign/Meninos/Bebezao.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNZW5pbm9zL0JlYmV6YW8uanBnIiwiaWF0IjoxNjk1MzA0MDk3LCJleHAiOjE2OTU5MDg4OTd9.K0grSxa96hMoWxuzdr53pMNRtNxIiOUiDhI4V1IdXjE&t=2023-09-21T13%3A48%3A18.337Z")
-    
+    consulta()
 elif selecao == "REMOVER":
        
     st.text("Este modulo ainda está em construção")
