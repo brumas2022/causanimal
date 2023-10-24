@@ -73,6 +73,10 @@ def captura():
             inserir(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12)
         
 def consulta():
+    
+    nome1 = selectbox("Escolha o nome", ("Bob", "Thevenan", "Mosquito")
+                       
+    
     try:
         
         connection = psycopg2.connect(
@@ -86,13 +90,15 @@ def consulta():
         cursor = connection.cursor()
         
         
-        comando = f"""SELECT nome FROM caninos WHERE genero='macho'"""
+        comando = f"""SELECT * FROM caninos WHERE nome={nome1}"""
         cursor.execute(comando)
-        resultado = cursor.fetchall()
+        resultado = cursor.fetchone()
     except Exception as ex:
             st.write(ex)
 
-    st.dataframe(resultado)
+    st.write(resultado[1])
+    st.write(resultado[2])
+    st.write(resultado[3])
 
 
 st.title("Cadastro dos caes")
