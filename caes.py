@@ -99,7 +99,7 @@ def consulta():
     st.write(resultado[1])
     st.write(resultado[2])
     st.write(resultado[3])
-    st.write(resultado[12])
+    st.image(resultado[12])
     st.write(resultado[13])
     
 
