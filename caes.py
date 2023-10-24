@@ -72,7 +72,27 @@ def captura():
         if enviar:
             inserir(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12)
         
+def consulta():
+    try:
+        
+        connection = psycopg2.connect(
+                   host='db.ibhcxtnwnonsnycfgjay.supabase.co',
+                   user='postgres',
+                   password='Hoje#estamos#fortes#como#geleia',
+                   database='postgres',
+                   port= '5432'
+        )
+        st.write("conexao exitosa")
+        cursor = connection.cursor()
+        
+        
+        comando = f"""SELECT nome FROM caninos WHERE genero="macho" """
+        cursor.execute(comando)
+        resultado = cursor.fetchall()
+    except Exception as ex:
+            st.write(ex)
 
+    st.dataframe(resultado)
 
 
 st.title("Cadastro dos caes")
