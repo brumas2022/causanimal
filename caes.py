@@ -58,7 +58,7 @@ def captura():
     with st.form("Caputar dados", clear_on_submit=True):
         a1 = st.text_input("Nome do câo")
         a2 = st.text_input("Genero do cão")
-        a3 = st.date_input("Data da entrada")
+        a3 = st.date_input("Data da entrada", value=None)
         a4 = st.date_input("Data da castração")
         a5 = st.date_input("Data da primeira vacina")
         a6 = st.date_input("Data da segunda vacina")
