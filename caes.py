@@ -97,11 +97,11 @@ def consulta():
             st.write(ex)
         
     cols = st.columns((0.75,0.25)
-    a = columns[1].write(resultado[1])
-    b = columns[1].write(resultado[2])
-    c = columns[1].write(resultado[3])
-    d = columns[0].image(resultado[12])
-    e = columns[1].write(resultado[13])
+    a = cols[1].write(resultado[1])
+    b = cols[1].write(resultado[2])
+    c = cols[1].write(resultado[3])
+    d = cols[0].image(resultado[12])
+    e = cols[1].write(resultado[13])
     
 
 
