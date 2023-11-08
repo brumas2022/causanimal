@@ -95,12 +95,13 @@ def consulta():
         resultado = cursor.fetchone()
     except Exception as ex:
             st.write(ex)
-
-    st.write(resultado[1])
-    st.write(resultado[2])
-    st.write(resultado[3])
-    st.image(resultado[12])
-    st.write(resultado[13])
+        
+    cols = st.columns((0.75,0.25)
+    a = columns[1].write(resultado[1])
+    b = columns[1].write(resultado[2])
+    c = columns[1].write(resultado[3])
+    d = columns[0].image(resultado[12])
+    e = columns[1].write(resultado[13])
     
 
 
