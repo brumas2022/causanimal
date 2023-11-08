@@ -97,7 +97,7 @@ def consulta():
             st.write(ex)
         
     cols = st.columns((0.75,0.25))
-    a = cols[1].markdown(resultado[1])
+    ##a = cols[1].markdown(resultado[1])
     b = cols[1].write(resultado[2])
     c = cols[1].write(resultado[3])
     d = cols[0].image(resultado[12])
