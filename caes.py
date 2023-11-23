@@ -62,7 +62,7 @@ def captura():
         a3 = col[0].date_input("Data da entrada")
         a4 = col[0].date_input("Data da castração")
         a5 = col[0].date_input("Data da primeira vacina")
-        a6 = col[1].date_input("Data da segunda vacina")
+        a6 = col[0].date_input("Data da segunda vacina")
         a7 = col[1].date_input("Data da terceira vacina")
         a8 = col[1].date_input("Data da adocao")
         a9 = col[1].date_input("Data da morte")
