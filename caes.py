@@ -21,10 +21,12 @@ def apresenta():
         comando = f"""SELECT * FROM caninos WHERE genero='femea'"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
+        
     except Exception as ex:
             st.write(ex)
 
     st.dataframe(resultado)
+    st.write("A quantidade de femeas è : ", len(resultado))
 
 def inserir(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12):
     try:
