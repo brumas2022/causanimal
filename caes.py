@@ -10,7 +10,7 @@ senha = st.sidebar.selectbox(
     ("Email", "Home phone", "Mobile phone")
 )
 
-while senha=="Email":
+while senha==" ":
         st.write("Insira algum dado")
 
 
