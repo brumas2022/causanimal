@@ -27,7 +27,8 @@ def apresenta():
         comando = f"""SELECT * FROM caninos WHERE genero='femeas'"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
-        st.markdown(":sunglasses: O numero de femeas é : "+str(len(resultado)))
+        st.markdown(":sunglasses: O numero de femeas é : ")
+        st.markdown(len(resultado))
 
         comando = f"""SELECT * FROM caninos"""
         cursor.execute(comando)
