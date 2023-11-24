@@ -21,17 +21,17 @@ def apresenta():
         comando = f"""SELECT * FROM caninos WHERE genero='macho'"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
-        st.markdown(":sunglasses: O numero de machos é : "+str(len(resultado)))
+        st.markdown(":dog2: O numero de machos é : "+str(len(resultado)))
 
         comando = f"""SELECT * FROM caninos WHERE genero='femea'"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
-        st.markdown(":sunglasses: O numero de femeas é : "+ str(len(resultado)))
+        st.markdown(":dog: O numero de femeas é : "+ str(len(resultado)))
        
         comando = f"""SELECT * FROM caninos"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
-        st.markdown(":sunglasses: O numero de total é : "+str(len(resultado)))
+        st.markdown(":sunglasses: :sunglasses: O numero de total é : "+str(len(resultado)))
         
     except Exception as ex:
             st.write(ex)
