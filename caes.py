@@ -4,6 +4,15 @@ import psycopg2
 
 
 st.set_page_config(page_title="Caes abrigados")
+
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
+
+
+
+
 def apresenta():
     try:
         
