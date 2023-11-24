@@ -75,7 +75,7 @@ def captura():
         
 def consulta():
     
-    nome1 = st.selectbox("Escolha o nome", ("Bob", "Gorda", "Mosquito"))
+    nome1 = st.selectbox("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony"))
                        
     
     try:
