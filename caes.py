@@ -21,12 +21,23 @@ def apresenta():
         comando = f"""SELECT * FROM caninos WHERE genero='macho'"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
+        st.markdown(":sunglasses: O numero de machos é : ", len(resultado))
+
+        comando = f"""SELECT * FROM caninos WHERE genero='femeas'"""
+        cursor.execute(comando)
+        resultado = cursor.fetchall()
+        st.markdown(":sunglasses: O numero de femeas é : ", len(resultado))
+
+        comando = f"""SELECT * FROM caninos"""
+        cursor.execute(comando)
+        resultado = cursor.fetchall()
+        st.markdown(":sunglasses: O numero de total é : ", len(resultado))
         
     except Exception as ex:
             st.write(ex)
 
     st.dataframe(resultado)
-    st.write("A quantidade de femeas è : ", len(resultado))
+   
 
 def inserir(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12):
     try:
