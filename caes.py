@@ -5,12 +5,13 @@ import psycopg2
 
 st.set_page_config(page_title="Caes abrigados")
 
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
+senha = st.sidebar.selectbox(
+    "Digite um deles para continuar",
     ("Email", "Home phone", "Mobile phone")
 )
 
-
+while senha==""
+        st.write("Insira algum dado")
 
 
 def apresenta():
