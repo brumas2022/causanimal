@@ -33,7 +33,7 @@ def apresenta():
         resultado = cursor.fetchall()
         st.markdown(":dog2: O numero de machos é : "+str(len(resultado)))
 
-        comando = f"""SELECT * FROM caninos WHERE genero='femea'"""
+        comando = f"""SELECT * FROM caninos WHERE genero='femea' and vivo=True"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
         st.markdown(":dog: O numero de femeas é : "+ str(len(resultado)))
@@ -43,7 +43,7 @@ def apresenta():
         resultado = cursor.fetchall()
         st.markdown(":sunglasses: :sunglasses: O numero de castrados é : "+str(len(resultado)))
        
-        comando = f"""SELECT * FROM caninos"""
+        comando = f"""SELECT * FROM caninos WHERE vivo=True"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
         st.markdown(":sunglasses: :sunglasses: O numero de total é : "+str(len(resultado)))
