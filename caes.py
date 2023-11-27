@@ -40,6 +40,11 @@ def apresenta():
         cursor.execute(comando)
         resultado = cursor.fetchall()
         st.markdown(":sunglasses: :sunglasses: O numero de total é : "+str(len(resultado)))
+
+        comando = f"""SELECT * FROM caninos WHERE castrado"""
+        cursor.execute(comando)
+        resultado = cursor.fetchall()
+        st.markdown(":sunglasses: :sunglasses: O numero de castrados é : "+str(len(resultado)))
         
     except Exception as ex:
             st.write(ex)
