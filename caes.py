@@ -11,7 +11,7 @@ senha = st.sidebar.selectbox(
 )
 
 if senha=="Email":
-    st.markdown(":green[Voce escolheu o email]")
+    st.sidebar.markdown(":green[Voce escolheu o email]")
 
 
 def apresenta():
