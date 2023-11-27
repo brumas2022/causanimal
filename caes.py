@@ -12,6 +12,8 @@ senha = st.sidebar.selectbox(
 
 if senha=="Email":
     st.sidebar.markdown(":green[Voce escolheu o email]")
+if senha=="Home phone":
+    st.sidebar.markdown(":blue[Voce escolheu o home phone")   
 
 
 def apresenta():
