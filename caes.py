@@ -6,10 +6,12 @@ import psycopg2
 st.set_page_config(page_title="Caes abrigados")
 
 senha = st.sidebar.selectbox(
-    "Digite um deles para continuar",
+    "Escolha um deles para continuar",
     ("Email", "Home phone", "Mobile phone")
 )
 
+if senha=="Email":
+    st.markdown(":green[Voce escolheu o email]")
 
 
 def apresenta():
@@ -41,7 +43,7 @@ def apresenta():
         resultado = cursor.fetchall()
         st.markdown(":sunglasses: :sunglasses: O numero de total é : "+str(len(resultado)))
 
-        comando = f"""SELECT * FROM caninos WHERE castrado"""
+        comando = f"""SELECT * FROM caninos WHERE castrado=True"""
         cursor.execute(comando)
         resultado = cursor.fetchall()
         st.markdown(":sunglasses: :sunglasses: O numero de castrados é : "+str(len(resultado)))
