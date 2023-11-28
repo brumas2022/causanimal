@@ -7,11 +7,12 @@ st.set_page_config(page_title="Caes abrigados")
 
 senha = st.sidebar.selectbox(
     "Escolha um deles para continuar",
-    ("Email", "Home phone", "Mobile phone")
+    ("Janis", "Home phone", "Mobile phone")
 )
 
 if senha=="Email":
-    st.sidebar.markdown(":green[Voce escolheu o email]")
+    st.sidebar.markdown(":green[Janis esta de olho em voce]")
+    st.sidebar.image("IMG_20230929_132220668~2.jpg")
 if senha=="Home phone":
     st.sidebar.markdown(":blue[Voce escolheu o home phone]")   
 
