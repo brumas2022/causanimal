@@ -10,7 +10,7 @@ senha = st.sidebar.selectbox(
     ("Janis", "Home phone", "Mobile phone")
 )
 
-if senha=="Email":
+if senha=="Janis":
     st.sidebar.markdown(":green[Janis esta de olho em voce]")
     st.sidebar.image("IMG_20230929_132220668~2.jpg")
 if senha=="Home phone":
