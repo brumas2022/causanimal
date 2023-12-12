@@ -108,7 +108,7 @@ def captura():
         
 def consulta():
     
-    nome1 = st.radio("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony", "Margarete", "Vira lata", "Magrelo", "Jair", "Branquelo", "Boca preta"))
+    nome1 = st.radio("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony", "Margarete", "Vira lata", "Magrelo", "Jair", "Branquelo", "Boca preta", "Betina"))
                        
     
     try:
