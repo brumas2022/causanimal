@@ -5,6 +5,13 @@ import psycopg2
 
 st.set_page_config(page_title="Caes abrigados")
 
+login = st.sidebar.text_input("Digite o login")
+password = st.sidebar.text_input("digite a senha")
+
+if password=="Shit":
+   pass
+
+
 senha = st.sidebar.selectbox(
     "Escolha um deles para continuar",
     ("Janis", "Home phone", "Mobile phone")
@@ -15,6 +22,7 @@ if senha=="Janis":
     st.sidebar.image("IMG_20230929_132220668~2.jpg")
 if senha=="Home phone":
     st.sidebar.markdown(":blue[Voce escolheu o home phone]")   
+
 
 
 def apresenta():
