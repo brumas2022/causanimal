@@ -11,7 +11,8 @@ while True:
    password = st.sidebar.text_input("Digite a senha")
    if password=="jacare":
       break
-
+   st.sidebar.wirte("Tente outra vez")
+   
 if password=="Shit":
    
    pass
