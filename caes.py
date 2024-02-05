@@ -25,7 +25,7 @@ def apresenta():
                    user='postgres.ibhcxtnwnonsnycfgjay',
                    password='Hoje#estamos#firmes#como#geleia',
                    database='postgres',
-                   porta='5432'
+                   port='5432'
                    ##host='db.ibhcxtnwnonsnycfgjay.supabase.co',
                    ##user='postgres',
                    ##password='Hoje#estamos#fortes#como#geleia',
