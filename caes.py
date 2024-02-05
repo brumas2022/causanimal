@@ -9,7 +9,7 @@ password=0
 while True:
    login = st.sidebar.text_input("Digite o login")
    password = st.sidebar.text_input("Digite a senha")
-   if password=="jacare"
+   if password=="jacare":
       break
 
 if password=="Shit":
