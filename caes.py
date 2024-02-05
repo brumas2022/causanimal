@@ -14,10 +14,6 @@ while True:
    else:
       st.sidebar.write("Tente outra vez")
    
-if password=="Shit":
-   
-   pass
-
 
 senha = st.sidebar.selectbox(
     "Escolha um deles para continuar",
