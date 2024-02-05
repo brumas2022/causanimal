@@ -21,11 +21,16 @@ def apresenta():
     try:
         
         connection = psycopg2.connect(
-                   host='db.ibhcxtnwnonsnycfgjay.supabase.co',
-                   user='postgres',
+                   host='aws-0-sa-east-1.pooler.supabase.com',
+                   user='postgres.ibhcxtnwnonsnycfgjay',
                    password='Hoje#estamos#fortes#como#geleia',
                    database='postgres',
-                   port= '5432'
+                   porta='5432'
+                   ##host='db.ibhcxtnwnonsnycfgjay.supabase.co',
+                   ##user='postgres',
+                   ##password='Hoje#estamos#fortes#como#geleia',
+                   ##database='postgres',
+                   ##port= '5432'
         )
         st.write("conexao exitosa")
         cursor = connection.cursor()
