@@ -4,11 +4,13 @@ import psycopg2
 
 
 st.set_page_config(page_title="Caes abrigados")
-
-login = st.sidebar.text_input("Digite o login")
-password = st.sidebar.text_input("digite a senha")
+password="marcos"
+while password="marcos"
+   login = st.sidebar.text_input("Digite o login")
+   password = st.sidebar.text_input("digite a senha")
 
 if password=="Shit":
+   
    pass
 
 
