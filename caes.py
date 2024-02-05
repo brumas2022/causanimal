@@ -7,7 +7,7 @@ st.set_page_config(page_title="Caes abrigados")
 password=0
 while password<10:
    login = st.sidebar.text_input("Digite o login")
-   password = st.sidebar.number_input("digite a senha")
+   password = st.sidebar.number_input("digite a senha", value=None)
 
 if password=="Shit":
    
