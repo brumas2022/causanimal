@@ -23,7 +23,7 @@ def apresenta():
         connection = psycopg2.connect(
                    host='aws-0-sa-east-1.pooler.supabase.com',
                    user='postgres.ibhcxtnwnonsnycfgjay',
-                   password='Hoje#estamos#fortes#como#geleia',
+                   password='Hoje#estamos#firmes#como#geleia',
                    database='postgres',
                    porta='5432'
                    ##host='db.ibhcxtnwnonsnycfgjay.supabase.co',
