@@ -1,5 +1,6 @@
 import streamlit as st
 import psycopg2
+import pandas as pd
 
 
 
@@ -157,7 +158,7 @@ def consulta():
         caozinho = f"""SELECT nome FROM caninos"""
         cursor.execute(caozinho)
         nome2 = cursor.fetchall()
-        a = list.[nome2]
+        a = pd.nome2
         st.write(a)
         nome1 = st.radio("Escolha o caozinho", (nome2))
         
