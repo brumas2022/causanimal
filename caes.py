@@ -159,7 +159,7 @@ def consulta():
         cursor.execute(caozinho)
         nome2 = cursor.fetchall()
         df = pd.DataFrame(nome2)
-        nome2 = df["nome"].tolist()
+        nome2 = df["0"].tolist()
         
         nome1 = st.radio("Escolha o caozinho", (nome2))
         
