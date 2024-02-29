@@ -156,9 +156,9 @@ def consulta():
        
         caozinho = f"""SELECT nome FROM caninos"""
         cursor.execute(caozinho)
-        nome2 = cursor.fetchone()
+        nome2 = cursor.fetchall()
         st.write(nome2)
-        nome1 = st.radio("Escolha o caozinho", (str(nome2)))
+        nome1 = st.radio("Escolha o caozinho", (nome2))
         
         
         
