@@ -153,7 +153,10 @@ def consulta():
         )
 
         cursor = connection.cursor()
-        nome2 = cursor.execute(f"""SELECT nome FROM caninos""")
+       
+        caozinho = f"""SELECT nome FROM caninos"""
+        cursor.execute(caozinho)
+        nome2 = cursor.fetchone()
         st.write(nome2)
         nome1 = st.radio("Escolha o caozinho", (str(nome2)))
         
