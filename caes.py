@@ -132,8 +132,8 @@ def captura():
         
 def consulta():
     
-    nome1 = st.radio("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony", "Margarete", "Vira lata", "Magrelo", "Jair", "Branquelo", "Boca preta", "Betina"))
-                       
+    ##nome1 = st.radio("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony", "Margarete", "Vira lata", "Magrelo", "Jair", "Branquelo", "Boca preta", "Betina"))
+                  
     
     try:
         
@@ -151,8 +151,11 @@ def consulta():
                    ##database='postgres',
                    ##port= '5432'
         )
-        st.write("conexao exitosa")
+
         cursor = connection.cursor()
+        nome2 = cursor.execute("SELECT nome FROM caninos")
+        nome1 = st.radio("Escolha o caozinho", nome2)
+        
         
         
         comando = f"""SELECT * FROM caninos WHERE nome='{nome1}'"""
