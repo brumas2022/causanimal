@@ -158,7 +158,8 @@ def consulta():
         caozinho = f"""SELECT nome FROM caninos"""
         cursor.execute(caozinho)
         nome2 = cursor.fetchall()
-        st.dataframe(nome2)
+        df = pd.Dataframe(nome2)
+        nome2 = df["nome"].tolist()
         
         nome1 = st.radio("Escolha o caozinho", (nome2))
         
