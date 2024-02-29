@@ -3,7 +3,7 @@ import psycopg2
 
 
 
-st.set_page_config(page_title="Caes abrigados")
+st.set_page_config(page_title="Caes abrigados", layout="wide")
 
 password=0
 while True:
