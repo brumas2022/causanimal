@@ -74,7 +74,7 @@ def apresenta():
     except Exception as ex:
             st.write(ex)
     st.column_config.ImageColumn(label="12", width="Small", help=None)
-    st.dataframe(resultado[:5])
+    st.dataframe(resultado[:5,:5])
    
 
 def inserir(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12):
