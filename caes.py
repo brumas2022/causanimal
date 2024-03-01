@@ -74,9 +74,9 @@ def apresenta():
     except Exception as ex:
             st.write(ex)
     
-    st.column_config.ImageColumn(label="12", width="small", help=None)
-    st.dataframe(resultado)
-   
+    #st.column_config.ImageColumn(label="12", width="small", help=None)
+    #st.dataframe(resultado)
+    st.data_editor(resultado,column_config={"12": st.column_config.ImageColumn("Preview Image", help="Streamlit app preview screenshots")}, hide_index=True,)
 
 def inserir(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12):
     try:
