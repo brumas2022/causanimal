@@ -183,7 +183,7 @@ def consulta():
 
 st.title("Cadastro dos caes")
 st.divider()
-selecao = st.selectbox("Escolha o modulo", ("CADASTRAR", "ATUALIZAR", "REMOVER", "RELATORIO"))
+selecao = st.selectbox("Escolha o modulo", ("CADASTRAR", "CONSULTAR", "REMOVER", "RELATORIO"))
 if selecao == "CADASTRAR":
     captura()
     
