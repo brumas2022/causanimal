@@ -4,6 +4,7 @@ import pandas as pd
 
 
 
+
 st.set_page_config(page_title="Caes abrigados", layout="wide")
 
 password=0
@@ -186,7 +187,7 @@ selecao = st.selectbox("Escolha o modulo", ("CADASTRAR", "ATUALIZAR", "REMOVER",
 if selecao == "CADASTRAR":
     captura()
     
-elif selecao == "ATUALIZAR":
+elif selecao == "CONSULTAR":
     consulta()
     
 elif selecao == "REMOVER":
