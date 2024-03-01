@@ -73,7 +73,7 @@ def apresenta():
         
     except Exception as ex:
             st.write(ex)
-
+    st.column_config.ImageColumn(label="12", width="Small", help=None)
     st.dataframe(resultado)
    
 
