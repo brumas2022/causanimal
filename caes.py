@@ -134,7 +134,7 @@ def captura():
 def consulta():
     
     ##nome1 = st.radio("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony", "Margarete", "Vira lata", "Magrelo", "Jair", "Branquelo", "Boca preta", "Betina"))
-                  
+    cols = st.columns((1,1,1))              
     
     try:
         
@@ -161,7 +161,7 @@ def consulta():
         df = pd.DataFrame(nome2)
         nome2 = df[0].tolist()
         
-        nome1 = st.radio("Escolha o caozinho", (nome2))
+        nome1 = cols[0].radio("Escolha o caozinho", (nome2))
         
         
         
@@ -171,12 +171,12 @@ def consulta():
     except Exception as ex:
             st.write(ex)
         
-    cols = st.columns((0.75,0.25))
+    
     ##a = cols[1].markdown(resultado[1])
-    b = cols[1].markdown("Nome : "+resultado[2])
-    c = cols[1].markdown("Genero : "+resultado[3])
-    d = cols[0].image(resultado[12])
-    e = cols[1].markdown("Historia :"+resultado[13])
+    b = cols[2].markdown("Nome : "+resultado[2])
+    c = cols[2].markdown("Genero : "+resultado[3])
+    d = cols[1].image(resultado[12])
+    e = cols[2].markdown("Historia :"+resultado[13])
     
 
 
