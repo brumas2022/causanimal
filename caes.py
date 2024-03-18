@@ -176,10 +176,10 @@ def consulta():
     if resultado[14]==True:
        cols[2].markdown("***Animal castrado(a)***")
     
-    cols[2].markdown("***Nome :***"+resultado[2])
-    cols[2].markdown("***Genero :***"+resultado[3])
+    cols[2].markdown("Nome : "+resultado[2])
+    cols[2].markdown("Genero : "+resultado[3])
     cols[1].image(resultado[12])
-    cols[2].markdown("***Idade :***"+today())
+    cols[2].markdown("Data entrada :"+resultado[4].strftime("%d/%m/%y"))
     cols[2].markdown("Historia :"+resultado[13])
     
 
