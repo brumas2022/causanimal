@@ -174,7 +174,7 @@ def consulta():
             st.write(ex)
         
     if resultado[14]==True:
-       col2[2].markdown("***Animal castrado(a)***")
+       cols[2].markdown("***Animal castrado(a)***")
     b = cols[2].markdown("Nome : "+resultado[2])
     c = cols[2].markdown("Genero : "+resultado[3])
     d = cols[1].image(resultado[12])
