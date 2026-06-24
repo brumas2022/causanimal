@@ -203,7 +203,8 @@ elif selecao == "CONSULTAR":
     consulta()
     
 elif selecao == "REMOVER":
-    st.text("Este modulo ainda está em construção")
+    #st.text("Este modulo ainda está em construção")
+    bdanimais()
     
 elif selecao == "RELATORIO":
     apresenta()
