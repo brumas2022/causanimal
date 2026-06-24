@@ -2,3 +2,4 @@ pip==23.3.1
 streamlit
 psycopg2-binary==2.9.9
 pandas==2.2.0
+supabase
