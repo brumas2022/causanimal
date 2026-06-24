@@ -3,5 +3,5 @@ streamlit==1.27.2
 psycopg2-binary==2.9.9
 pandas==2.2.0
 os
-supabase
 python-dotenv
+supabase
