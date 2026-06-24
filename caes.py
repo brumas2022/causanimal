@@ -139,7 +139,7 @@ def consulta():
     
     ##nome1 = st.radio("Escolha o nome", ("Bob", "Gorda", "Mosquito", "Baby", "Jhony", "Margarete", "Vira lata", "Magrelo", "Jair", "Branquelo", "Boca preta", "Betina"))
     cols = st.columns((1,1,1))              
-    nome = st.secrets["SUPABASE_URL"]
+    nome = st.secrets['SUPABASE_URL']
     st.write(nome)
     try:
         
