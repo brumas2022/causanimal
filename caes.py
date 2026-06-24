@@ -2,7 +2,7 @@ import streamlit as st
 import psycopg2
 import pandas as pd
 import os
-#from supabase import create_client, Client
+from supabase import create_client, Client
 
 
 
