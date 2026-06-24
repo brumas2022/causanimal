@@ -30,7 +30,11 @@ if senha=="Janis":
 if senha=="Home phone":
     st.sidebar.markdown(":blue[Voce escolheu o home phone]")   
 
-
+def bdanimais():
+   from supabase import create_client, Client
+   url = st.secrets['SUPABASE_URL']
+   key = st.secrets['SUPABASE_KEY']
+   supabase: Client = create_client(url,key)
 
 def apresenta():
     try:
