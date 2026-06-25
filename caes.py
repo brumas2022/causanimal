@@ -36,7 +36,7 @@ def bdanimais():
    key = st.secrets['SUPABASE_KEY']
    supabase: Client = create_client(url,key)
    total = supabase.table("caninos").select("*").eq("genero","macho").execute()
-   st.write(total)
+   st.markdown(total)
 
 def apresenta():
     try:
