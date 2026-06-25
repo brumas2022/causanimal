@@ -55,7 +55,7 @@ def consulta_supa():
                col[0].write("___")
                col[1].markdown(f"{post['entrada']}", text_alignment="center")
                col[1].write("___")
-               col[2].markdown(f"(post['historico'])", text_aligment="center")
+               col[2].markdown(f"(post['historico'])", text_alignment="center")
                col[2].image(f"(post['foto'])")
                col[2].write("___")
       
