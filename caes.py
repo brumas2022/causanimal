@@ -43,6 +43,36 @@ def bdanimais():
    st.markdown(f'Numero de machos : {nro_macho}')
    st.markdown(f'Numero de femeas : {nro_femea}')
 
+def consulta_supa():
+   from supabase import create_client, Client
+   url = st.secrets['SUPABASE_URL']
+   key = st.secrets['SUPABASE_KEY']
+   supabase: Client = create_client(url,key)
+   total_macho = supabase.table("caninos").select("nome", "entrada", "foto").eq("genero","macho").eq("vivo", True).eq("adotado", False).execute()
+   for post in total_macho.data:
+               col[0].markdown(f"{post['nome']}", text_alignment="center")
+               col[0].write("___")
+               col[1].markdown(f"{post['entrada']}", text_alignment="center")
+               col[1].write("___")
+               col[2].markdown(f"{post['foto']}", text_alignment="center")
+               col[2].write("___")
+      
+               #col[3].markdown(f"{post['notafiscal']}", text_alignment="center")
+               #col[3].write("___")
+               #col[4].markdown(f"{post['datapagto']}", text_alignment="center")
+               #col[4].write("___")
+               #st.write("___")
+
+
+   
+   #total_femea = supabase.table("caninos").select("*").eq("genero","femea").eq("vivo", True).eq("adotado", False).execute()
+   #nro_macho = len(total_macho.data)
+   #nro_femea = len(total_femea.data)
+   #st.dataframe(total.data)
+   #st.markdown(f'Numero de machos : {nro_macho}')
+   #st.markdown(f'Numero de femeas : {nro_femea}')
+   
+
 def apresenta():
     try:
         
@@ -199,7 +229,7 @@ def consulta():
 
 st.title("Cadastro dos caes")
 st.divider()
-selecao = st.selectbox("Escolha o modulo", ("CADASTRAR", "CONSULTAR", "REMOVER", "RELATORIO"))
+selecao = st.selectbox("Escolha o modulo", ("CADASTRAR", "CONSULTAR", "REMOVER", "RELATORIO", "SUPA"))
 if selecao == "CADASTRAR":
     captura()
     
@@ -213,5 +243,7 @@ elif selecao == "REMOVER":
 elif selecao == "RELATORIO":
     #apresenta()
     bdanimais()
+elif selecao == "SUPA":
+    consulta_supa()
     
     
