@@ -48,15 +48,16 @@ def consulta_supa():
    url = st.secrets['SUPABASE_URL']
    key = st.secrets['SUPABASE_KEY']
    supabase: Client = create_client(url,key)
-   total_macho = supabase.table("caninos").select("nome", "entrada", "foto").eq("genero","macho").eq("vivo", True).eq("adotado", False).execute()
+   total_macho = supabase.table("caninos").select("nome", "entrada", "historico", "foto").eq("genero","macho").eq("vivo", True).eq("adotado", False).execute()
    col = st.columns(5, width=900)
    for post in total_macho.data:
                col[0].markdown(f"{post['nome']}", text_alignment="center")
                col[0].write("___")
                col[1].markdown(f"{post['entrada']}", text_alignment="center")
                col[1].write("___")
-               #col[2].image(post['foto'])
-               #col[2].write("___")
+               col[2].markdown(f"(post['historico'])", text_aligmennt="center")
+               col[2].image(f"(post['foto']))
+               col[2].write("___")
       
                #col[3].markdown(f"{post['notafiscal']}", text_alignment="center")
                #col[3].write("___")
