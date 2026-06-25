@@ -49,6 +49,7 @@ def consulta_supa():
    key = st.secrets['SUPABASE_KEY']
    supabase: Client = create_client(url,key)
    total_macho = supabase.table("caninos").select("nome", "entrada", "foto").eq("genero","macho").eq("vivo", True).eq("adotado", False).execute()
+   col = st.columns(5, width=900)
    for post in total_macho.data:
                col[0].markdown(f"{post['nome']}", text_alignment="center")
                col[0].write("___")
