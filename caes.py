@@ -35,7 +35,7 @@ def bdanimais():
    url = st.secrets['SUPABASE_URL']
    key = st.secrets['SUPABASE_KEY']
    supabase: Client = create_client(url,key)
-   total = supabase.table("caninos").select("*").eq("genero","macho").execute()
+   total = supabase.table("caninos").select("*").eq("genero","macho").eq("vivo", True).execute()
    nro = len(total.data)
    st.dataframe(total.data)
    st.write(nro)
