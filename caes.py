@@ -40,7 +40,7 @@ def bdanimais():
    nro_macho = len(total_macho.data)
    nro_femea = len(total_femea.data)
    #st.dataframe(total.data)
-   st.markdown('Numero de machos {nro_macho}')
+   st.markdown(f'Numero de machos {nro_macho}')
 
 def apresenta():
     try:
