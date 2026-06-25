@@ -35,10 +35,12 @@ def bdanimais():
    url = st.secrets['SUPABASE_URL']
    key = st.secrets['SUPABASE_KEY']
    supabase: Client = create_client(url,key)
-   total = supabase.table("caninos").select("*").eq("genero","macho").eq("vivo", True).execute()
-   nro = len(total.data)
-   st.dataframe(total.data)
-   st.write(nro)
+   total_macho = supabase.table("caninos").select("*").eq("genero","macho").eq("vivo", True).execute()
+   total_femea = supabase.table("caninos").select("*").eq("genero","femea").eq("vivo", True).execute()
+   nro_macho = len(total_macho.data)
+   nro_femea = len(total_femea.data)
+   #st.dataframe(total.data)
+   st.markdown('Numero de machos {nro_macho}')
 
 def apresenta():
     try:
