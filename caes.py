@@ -61,7 +61,7 @@ def consulta_supa():
                   col[3].image(post['foto'], width=300)
                   col[3].write("___")
                else:
-                  col[3].markdown("SEM FOTO")
+                  col[3].markdown("SEM FOTO", text_alignment="center")
                   col[3].write("___")
       
                #col[3].markdown(f"{post['notafiscal']}", text_alignment="center")
