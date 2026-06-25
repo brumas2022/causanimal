@@ -213,6 +213,6 @@ elif selecao == "REMOVER":
     
 elif selecao == "RELATORIO":
     #apresenta()
-   bdanimais()
+    bdanimais()
     
     
