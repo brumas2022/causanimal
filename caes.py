@@ -58,7 +58,7 @@ def consulta_supa():
                col[2].markdown(post['historico'], text_alignment="center")
                col[2].write("___")
                if post['foto']:
-                  col[3].image(post['foto'], width=300)
+                  col[3].image(post['foto'], width=100)
                   col[3].write("___")
                else:
                   col[3].markdown("SEM FOTO", text_alignment="center")
