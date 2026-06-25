@@ -40,7 +40,8 @@ def bdanimais():
    nro_macho = len(total_macho.data)
    nro_femea = len(total_femea.data)
    #st.dataframe(total.data)
-   st.markdown(f'Numero de machos {nro_macho}')
+   st.markdown(f'Numero de machos : {nro_macho}')
+   st.markdown(f'Numero de femeas : {nro_femea}')
 
 def apresenta():
     try:
@@ -208,9 +209,10 @@ elif selecao == "CONSULTAR":
     
 elif selecao == "REMOVER":
     #st.text("Este modulo ainda está em construção")
-    bdanimais()
+    #bdanimais()
     
 elif selecao == "RELATORIO":
-    apresenta()
+    #apresenta()
+   bdanimais()
     
     
