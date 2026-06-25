@@ -48,7 +48,7 @@ def consulta_supa():
    url = st.secrets['SUPABASE_URL']
    key = st.secrets['SUPABASE_KEY']
    supabase: Client = create_client(url,key)
-   selecao_genero = st.selectbox("Selecione o genero", ("Femea", "Macho"))
+   selecao_genero = st.selectbox("Selecione o genero", ("femea", "macho"))
    total_macho = supabase.table("caninos").select("nome", "entrada", "historico", "foto").eq("genero", selecao_genero).eq("vivo", True).eq("adotado", False).execute()
    col = st.columns(5, width=900)
    for post in total_macho.data:
